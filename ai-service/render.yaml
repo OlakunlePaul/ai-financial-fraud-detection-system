@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: fraud-detection-ai
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: PORT
+        value: 5001
+      - key: FLASK_ENV
+        value: production
+
